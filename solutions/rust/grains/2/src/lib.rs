@@ -1,0 +1,14 @@
+const SQUARES: u32 = 64;
+
+pub fn square(s: u32) -> u64 {
+    assert!(
+        (1..=SQUARES).contains(&s),
+        "Square must be between 1 and 64"
+    );
+
+    1u64 << (s - 1)
+}
+
+pub fn total() -> u64 {
+    u64::MAX
+}
